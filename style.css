@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(12, 6, 46);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  overflow: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: clamp(0.5rem, 30vw, 4rem);
+  text-wrap: nowrap;
+}
+
+header :nth-child(2) {
+  font-size: clamp(0.4rem, 30vw, 1.5rem);
+  transition: all 0.2s ease-in-out;
+}
+
+header :nth-child(2) a:link,
+header :nth-child(2) a:visited {
+  color: #f87a03;
+  text-decoration: underline;
+}
+
+header :nth-child(2) a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search-bar {
+  width: 40vw;
+}
+@media (max-width: 1000px) {
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 5rem;
+    
+  }
+
+  
+  
+  .search-container {
+    margin: 2rem 0 2rem 0;
+  }
+  #search-bar {
+    width: 85vw;
+  }
+}
+
+#search-bar input {
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  width: 100%;
+  border: solid 2px black;
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#search-bar input:focus {
+  outline: none;
+  border: solid 2px #f87a03;
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 15px #f87a03;
+}
+
+#search-button {
+  background: none;
+  border: none;
+
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#search-button:hover {
+  transform: translateY(-0.5rem);
+}
+
+#output-container {
+  display: flex;
+  text-align: start;
+  flex-wrap: wrap;
+  height: 38vh;
+  width: clamp(1rem, 98vw, 100vw);
+  border: solid 2px #f87a03;
+  padding: 1rem;
+  overflow: none;
+  overflow-y: scroll;
+  background-color: black;
+  color: white;
+  border-radius: 0.4rem;
+}
+
+#output-container:hover {
+  cursor: not-allowed;
+}
